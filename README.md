@@ -1,6 +1,6 @@
 
 
-hcan-pytorch
+#hcan-pytorch
 hierarchical convolutional attention networks for text classification
 
 from models import Proto_CNN as HCAN
