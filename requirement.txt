@@ -1,0 +1,23 @@
+pandas==0.25.1
+nltk==3.4.5
+gensim==3.8.1
+import nltk
+nltk.download('wordnet')
+sklearn
+tf-nightly==2.2.0.dev20200130
+arrow==0.15.5
+torch==1.3.1 torchvision==0.4.2 -f https://download.pytorch.org/whl/torch_stable.html
+
+https://pypi.org/project/torchsummary/#files
+
+
+# GPU安裝教學
+使用GPU安裝教學 https://blog.csdn.net/tahir_111/article/details/84767650
+
+STEP1: CUDA Toolkit 9.0 Downloads https://developer.nvidia.com/cuda-90-download-archive
+
+STEP2: cuDNN Archive https://developer.nvidia.com/rdp/cudnn-archive
+
+STEP3: conda install pytorch torchvision cudatoolkit=9.0 -c pytorch
+
+STEP4: 測試 nvidia-smi import torch torch.cuda.is_available()
