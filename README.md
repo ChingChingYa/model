@@ -1,14 +1,9 @@
 # hcan-pytorch
 hierarchical convolutional attention networks for text classification
+
 (paper https://www.aclweb.org/anthology/W18-3002/)
 hcan程式參考:https://github.com/yongqyu/hcan-pytorch
 
-
-# How to use my code
-With my code, you can:
-
-Train your model with any dataset
-Given either my trained model or yours, you could evaluate any test dataset whose have the same set of classes
 
 # Requirements:
 python==3.7
@@ -25,7 +20,7 @@ https://pypi.org/project/torchsummary/#files
 
 # Datasets:
 Amazon product data(http://jmcauley.ucsd.edu/data/amazon/)
-
+train 80% / valid 10% / test  10% 
 | Dataset                 |資料筆數|
 |-------------------------|:----------:|
 | Musical Instruments     |   10240   |
@@ -34,3 +29,14 @@ Amazon product data(http://jmcauley.ucsd.edu/data/amazon/)
 | Amazon Instant Video    |   37120   |
 | Office Products         |   53248   |
 | Digital Music           |   64704   |
+
+
+
+# How to use my code
+## STEP1資料前處理
+` ``python pretrain.py     ``` 
+
+
+## Training
+
+
