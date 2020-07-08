@@ -56,9 +56,9 @@ cuDNN Archive
 https://developer.nvidia.com/rdp/cudnn-archive
 
 STEP3:
-
+```
 conda install pytorch torchvision cudatoolkit=9.0 -c pytorch
-
+```
 STEP4:
 
 測試
