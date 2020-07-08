@@ -11,11 +11,9 @@ python==3.7
 
 pandas==0.25.1
 
-nltk==3.4.5
+nltk==3.5
 
 gensim==3.8.1
-
-nltk
 
 sklearn
 
@@ -41,12 +39,50 @@ train 80% / valid 10% / test  10%
 | Digital Music           |   64704   |
 
 
+# GPU:
+
+https://blog.csdn.net/tahir_111/article/details/84767650
+
+STEP1:
+
+CUDA Toolkit 9.0 Downloads
+
+https://developer.nvidia.com/cuda-90-download-archive
+
+STEP2:
+
+cuDNN Archive
+
+https://developer.nvidia.com/rdp/cudnn-archive
+
+STEP3:
+
+conda install pytorch torchvision cudatoolkit=9.0 -c pytorch
+
+STEP4:
+
+測試
+
+nvidia-smi
+
+```import torch
+torch.cuda.is_available()
+```
 
 # How to use my code
+
+訓練流程: 
+
+![alt 文字][logo]
+
+[logo]: https://github.com/ChingChingYa/model/blob/master/pic/Diagram.png
+
+
 ### STEP1-資料前處理+訓練詞庫(Word2Vec)
 訓練詞庫(刪除詞頻小於5)、輸出詞表、計算文件長度、分割文件，刪除停用詞
 
 最終獲得
+
 **商品評分檔**(用戶ID/商品ID/整體評分)
 
 **文字評論檔**(用戶評論文本/整體評分)
@@ -57,8 +93,15 @@ python pretrain.py
 ### STEP2-Training
 
 ```
-python hcan_train.py
+python train.py
 ``` 
+先進行pmf訓練-->test
+
+判斷是否收斂至最小-->否-->將uv哈德瑪乘積傳入HCAN模型中，進行HCAN訓練
+
+判斷是否收斂至最小-->是-->stop
+
+
 ### STEP2-Aspect提取
 ```
 python lda.py
