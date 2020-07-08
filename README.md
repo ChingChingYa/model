@@ -15,7 +15,6 @@ sklearn
 tf-nightly==2.2.0.dev20200130
 arrow==0.15.5
 torch==1.3.1 torchvision==0.4.2 -f https://download.pytorch.org/whl/torch_stable.html
-
 https://pypi.org/project/torchsummary/#files
 
 # Datasets:
