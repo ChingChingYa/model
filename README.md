@@ -65,7 +65,8 @@ STEP4:
 
 nvidia-smi
 
-```import torch
+```
+import torch
 torch.cuda.is_available()
 ```
 
